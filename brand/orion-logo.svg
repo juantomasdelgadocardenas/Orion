@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" role="img" aria-label="Orion">
+  <g transform="translate(20 20) scale(0.390625)">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10163A"/>
+      <stop offset="1" stop-color="#2A2F6B"/>
+    </linearGradient>
+    <linearGradient id="pelaje" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6AE57"/>
+      <stop offset="1" stop-color="#EE9440"/>
+    </linearGradient>
+    <clipPath id="cabeza">
+      <path d="M256 182C330 182 400 215 412 290L440 308 412 328 432 358 396 366C370 420 310 442 256 442C202 442 142 420 116 366L80 358 100 328 72 308 100 290C112 215 182 182 256 182Z"/>
+    </clipPath>
+    <path id="estrella" d="M0-14Q0 0 14 0Q0 0 0 14Q0 0-14 0Q0 0 0-14Z"/>
+  </defs>
+
+  <rect width="512" height="512" rx="116" fill="url(#cielo)"/>
+
+  <!-- Cinturón de Orión -->
+  <g fill="#FFD98A">
+    <use href="#estrella" transform="translate(206 124)"/>
+    <use href="#estrella" transform="translate(256 100) scale(1.25)"/>
+    <use href="#estrella" transform="translate(306 76)"/>
+  </g>
+  <g fill="#FFFFFF" opacity=".55">
+    <circle cx="74" cy="92" r="3"/><circle cx="440" cy="70" r="3.5"/>
+    <circle cx="452" cy="178" r="2.5"/><circle cx="58" cy="196" r="2.5"/>
+    <circle cx="398" cy="52" r="2"/><circle cx="118" cy="56" r="2"/>
+  </g>
+
+  <!-- Bigotes -->
+  <g stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".8" fill="none">
+    <path d="M200 366Q130 350 52 356"/><path d="M200 378Q130 384 58 400"/>
+    <path d="M312 366Q382 350 460 356"/><path d="M312 378Q382 384 454 400"/>
+  </g>
+
+  <!-- Orejas -->
+  <g stroke-linejoin="round" stroke-width="14">
+    <path d="M120 262L126 126 236 192Z" fill="#EE9440" stroke="#EE9440"/>
+    <path d="M392 262L386 126 276 192Z" fill="#EE9440" stroke="#EE9440"/>
+    <path d="M146 232L146 162 204 198Z" fill="#F9CDB6" stroke="#F9CDB6" stroke-width="8"/>
+    <path d="M366 232L366 162 308 198Z" fill="#F9CDB6" stroke="#F9CDB6" stroke-width="8"/>
+  </g>
+
+  <!-- Cabeza -->
+  <path d="M256 182C330 182 400 215 412 290L440 308 412 328 432 358 396 366C370 420 310 442 256 442C202 442 142 420 116 366L80 358 100 328 72 308 100 290C112 215 182 182 256 182Z"
+        fill="url(#pelaje)" stroke="#EE9440" stroke-width="10" stroke-linejoin="round"/>
+
+  <g clip-path="url(#cabeza)">
+    <!-- Atigrado -->
+    <g stroke="#DC7C2C" stroke-width="10" stroke-linecap="round" fill="none">
+      <path d="M212 198Q204 220 210 244"/><path d="M182 208Q172 228 176 252"/><path d="M152 226Q142 242 146 262"/>
+      <path d="M300 198Q308 220 302 244"/><path d="M330 208Q340 228 336 252"/><path d="M360 226Q370 242 366 262"/>
+    </g>
+    <!-- Máscara blanca -->
+    <path d="M256 196C268 224 278 250 286 278C294 312 332 342 450 338L450 460 62 460 62 338C180 342 218 312 226 278C234 250 244 224 256 196Z" fill="#FFFDF7"/>
+  </g>
+
+  <!-- Ojos -->
+  <g>
+    <path d="M154 294Q188 258 224 296Q190 322 154 294Z" fill="#C4832B"/>
+    <path d="M358 294Q324 258 288 296Q322 322 358 294Z" fill="#C4832B"/>
+    <ellipse cx="190" cy="292" rx="13" ry="16" fill="#1B1420"/>
+    <ellipse cx="322" cy="292" rx="13" ry="16" fill="#1B1420"/>
+    <circle cx="196" cy="285" r="4.5" fill="#FFFFFF"/>
+    <circle cx="328" cy="285" r="4.5" fill="#FFFFFF"/>
+    <path d="M154 294Q188 258 224 296" fill="none" stroke="#7A4A1C" stroke-width="5" stroke-linecap="round"/>
+    <path d="M358 294Q324 258 288 296" fill="none" stroke="#7A4A1C" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Nariz y boca -->
+  <path d="M240 344Q256 337 272 344Q268 360 256 365Q244 360 240 344Z" fill="#F28FA2"/>
+  <path d="M256 365V376M256 376Q244 392 228 382M256 376Q268 392 284 382" fill="none" stroke="#C99A8E" stroke-width="4.5" stroke-linecap="round"/>
+  </g>
+  <text x="252" y="158" font-family="'Plus Jakarta Sans','Inter','Segoe UI',system-ui,sans-serif" font-size="132" font-weight="700" letter-spacing="-4" fill="#1B2150">Orion</text>
+</svg>
