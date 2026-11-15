@@ -11,18 +11,32 @@ Diseño completo y columnas exactas de la hoja: [docs/ARQUITECTURA.md](docs/ARQU
 
 Requisitos: [uv](https://docs.astral.sh/uv/) y Node 20 o superior.
 
+Escribe cada comando por separado (PowerShell de Windows no acepta `&&`). Desde la carpeta `Orion`:
+
 ```bash
-cd frontend && npm install && npm run build
+cd frontend
 ```
 
 ```bash
-cd backend && cp .env.example .env
+npm install
 ```
 
-Abre `backend/.env` y escribe tu PIN en `ORION_PIN=`. Luego:
+```bash
+npm run build
+```
 
 ```bash
-cd backend && uv run uvicorn app.main:app --host 0.0.0.0 --port 8000
+cd ../backend
+```
+
+```bash
+copy .env.example .env
+```
+
+Abre `backend/.env` (en Windows: `notepad .env`) y escribe tu PIN en `ORION_PIN=`. Luego:
+
+```bash
+uv run uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
 Abre <http://localhost:8000>. Verás la etiqueta **Demo**: son datos inventados que se reinician al apagar el servidor.
@@ -52,12 +66,14 @@ Chrome en iPhone no admite extensiones. La misma app se abre como página web, s
 5. Crea un libro vacío en Google Sheets y compártelo como **Editor** con el correo de la cuenta de servicio (termina en `iam.gserviceaccount.com`).
 6. En `backend/.env` pon `ORION_MODO=sheets` y en `ORION_SHEET_ID` el texto que va entre `/d/` y `/edit` en la URL del libro.
 
+Desde la carpeta `backend`:
+
 ```bash
-cd backend && uv run python -m scripts.verificar_conexion
+uv run python -m scripts.verificar_conexion
 ```
 
 ```bash
-cd backend && uv run python -m scripts.crear_esquema --categorias
+uv run python -m scripts.crear_esquema --categorias
 ```
 
 El segundo comando crea las pestañas con sus encabezados y unas categorías sugeridas (`--demo` carga además todos los datos de ejemplo). Después arranca el servidor como en el paso 1 y configura personas, cuentas y tarjetas desde **Ajustes**.
@@ -68,6 +84,8 @@ Guarda la foto como `frontend/public/metas/akt-tt-200-rally.jpg` y vuelve a ejec
 
 ## Pruebas
 
+Desde la carpeta `backend`:
+
 ```bash
-cd backend && uv run pytest
+uv run pytest
 ```
