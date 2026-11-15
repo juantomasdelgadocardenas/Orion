@@ -1,0 +1,3 @@
+Imágenes de las metas. El nombre del archivo es el campo "imagen" de la meta, con extensión .jpg
+Ejemplo: la meta con imagen "akt-tt-200-rally" busca  metas/akt-tt-200-rally.jpg
+Si el archivo no existe, la app muestra un icono genérico.
